@@ -1,0 +1,26 @@
+<!--
+  Generated template for the NotificationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{constants.LANGS.LABEL_NOTIFICATIONS}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="no-data" *ngIf="isLoaded && notifications.length==0">{{constants.LANGS.PAGE_LABEL_NO_NOTIFICATIONS}}</div>
+  <div (click)="actionNotification(notification)" class="container" *ngFor="let notification of notifications">
+    <div class="notification" [ngClass]="{seen: notification.isRead=='1'}">
+      <div class="title">{{notification.title}}</div>
+      <div class="subtitle">{{notification.message}}</div>
+      <div class="date">{{notification.createdAt | amFromUtc | amLocal | amTimeAgo}}</div>
+    </div>
+  </div>
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

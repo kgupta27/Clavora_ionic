@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "1013875668618",
+    "firebase_url": "https://clavora-7153d.firebaseio.com",
+    "project_id": "clavora-7153d",
+    "storage_bucket": "clavora-7153d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013875668618:android:8affc588f4cf3808",
+        "android_client_info": {
+          "package_name": "com.appster.clavora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013875668618-klq6gc5k5dpecsqtha9g8enifoefvt8t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appster.clavora",
+            "certificate_hash": "2c6c3b0c45f8e57d9628bffaac45600956b831d7"
+          }
+        },
+        {
+          "client_id": "1013875668618-2ibft4hplqnct68rgjlv2l52msfkfrs8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbnlcjQwdSKvz_DcHYvQAMksR1thsZiZQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013875668618-2ibft4hplqnct68rgjlv2l52msfkfrs8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1013875668618-ek59bbn4qi60auevp0okrfhbschp9qcj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appster.clavora"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

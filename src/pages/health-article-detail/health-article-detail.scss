@@ -1,0 +1,53 @@
+page-health-article-detail {
+    .back-arrow-custom {
+        -webkit-svg-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .image-container {
+        position: relative;
+        .article-image {
+            height: 230px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .video-container {
+        position: relative;
+        video {
+            height: 230px;
+            width: 100%;
+            pointer-events: none;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    ion-content .title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff;
+        padding: 20px 32px;
+    }
+    .date-container {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px 32px;
+        .date {
+            background-color: #536ef3;
+            font-size: 9px;
+            color: #ffffff;
+            padding: 4px 9px;
+        }
+    }
+    .description {
+        padding: 23px 32px;
+        color: #787993;
+        font-size: 14px;
+    }
+    .full-screen-button {
+        width: 24px;
+        height: 20px;
+        position: absolute;
+        top: 195px;
+        right: 32px;
+        z-index: 99;
+    }
+}

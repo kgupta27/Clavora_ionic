@@ -1,0 +1,41 @@
+<!--
+  Generated template for the ChooseConsumptionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{constants.LANGS.PAGE_TITLE_CHOOSE_CONSUMPTION}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="container">
+    <p>{{constants.LANGS.PAGE_TITLE_CHOOSE_CONSUMPTION_1}}</p>
+    <div class="question-container">
+      <div class="question-option">{{constants.LANGS.PAGE_TITLE_CHOOSE_CONSUMPTION_2}}</div>
+      <div class="question">
+        {{constants.LANGS.PAGE_TITLE_CHOOSE_CONSUMPTION_3}}
+      </div>
+      <img class="info-icon" alt="" (click)="showInfo()" src="assets/icon/info.png">
+    </div>
+    <ul class="options">
+      <li *ngFor="let vitamin of vitamins" class="radio-option" [class.active]="selectedVitamin == vitamin.id" (click)="selectVitamin(vitamin.id);">
+        <span>
+          <img alt="" [hidden]="selectedVitamin == vitamin.id">
+          <img alt="" class="active" [hidden]="selectedVitamin != vitamin.id">
+          {{vitamin.name}}
+        </span>
+        <img *ngIf="selectedVitamin == vitamin.id" alt="" class="info-icon" (click)="showVitInfo(vitamin.description)" src="assets/icon/info.png">
+      </li>
+    </ul>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <default-button [attr.disabled]="!selectedVitamin" [text]="constants.LANGS.LABEL_NEXT" tappable (click)="onNext()"></default-button>
+</ion-footer>

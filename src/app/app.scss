@@ -1,0 +1,362 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+ion-content,
+.toolbar-background {
+    background-color: #1d1d27 !important;
+}
+
+.image-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.absolute-right {
+    right: 0;
+}
+
+.absolute-left {
+    left: 0;
+}
+
+.absolute-bottom {
+    bottom: 0;
+}
+
+.absolute-top {
+    top: 0;
+}
+
+.relative {
+    position: relative;
+}
+
+.item-input {
+    padding-left: 0 !important;
+    background: transparent !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    letter-spacing: 0.8px !important;
+    .item-inner {
+        padding-right: 0 !important;
+    }
+    ::placeholder {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        color: #9390a2;
+    }
+}
+
+.field-validation-error {
+    width: 100%;
+    height: 14px;
+    font-family: Helvetica;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    color: #cb4168;
+    position: absolute;
+    width: calc(100% - 64px);
+    margin-top: 6px;
+}
+
+.back-arrow-custom {
+    position: absolute;
+    top: 50px;
+    left: 32px;
+    z-index: 99;
+}
+
+.i-phone-x {
+    .back-arrow-custom {
+        top: 80px;
+    }
+}
+
+// -------- Header CSS ------ //
+ion-header {
+    padding-top: 19px;
+    padding-bottom: 19px;
+    border-bottom: solid 1px #444757;
+}
+
+.back-button {
+    position: absolute;
+    color: white;
+    background-image: url('../assets/icon/back-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 50% center;
+    background-size: contain;
+    z-index: 999;
+    height: 15px;
+    min-height: 15px;
+    width: 22px;
+    left: 22px;
+    margin: 0 !important;
+}
+
+.ion-ios-arrow-back:before,
+.ion-md-arrow-back:before {
+    content: '' !important;
+}
+
+.header-ios .toolbar-background-ios,
+.footer-ios .toolbar-background-ios,
+.header-md .toolbar-background-md,
+.footer-md .toolbar-background-md {
+    border: none;
+}
+
+/* --------- Textbox CSS -------- */
+
+.item-ios.item-block .item-inner,
+.item-md.item-block .item-inner {
+    border-bottom: 1px solid #262632;
+}
+
+/* .item-ios.item-block.ng-invalid.input-has-value .item-inner,
+.item-md.item-block.ng-invalid.input-has-value .item-inner {
+    border-bottom: 1px solid #cb4168;
+} */
+
+.item-ios.item-block.ng-invalid.input-has-value .item-inner,
+.item-md.item-block.ng-invalid.input-has-value .item-inner {
+    border-bottom: 1px solid #cb4168;
+}
+
+.alert-ios,
+.alert-md {
+    .alert-wrapper {
+        max-width: 350px;
+        padding: 25px 18px;
+        border-radius: 0px;
+        .alert-sub-title {
+            font-family: 'OpenSans';
+            color: #1d1d27;
+            font-size: 18px;
+        }
+        .alert-message {
+            font-family: 'OpenSans';
+            color: #cacad7;
+            font-size: 14px;
+        }
+        .alert-button-group {
+            margin: 0 auto;
+            button {
+                border: none;
+                font-family: 'OpenSans-SemiBold';
+                width: 97px !important;
+                max-width: 97px !important;
+                min-width: unset !important;
+                color: #ffffff;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 0.9px;
+                &:first-child {
+                    background-color: #536ef3;
+                    margin-right: 5px;
+                }
+                &:last-child {
+                    background-color: #34343e;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.blue-gradient {
+    display: flex;
+    background-image: linear-gradient(102deg, #8ba7fa, #536ef3);
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: white;
+    padding: 6px;
+}
+
+.popover-ios .popover-arrow,
+.popover-md .popover-arrow {
+    display: none;
+}
+
+.popover-ios.questions .popover-content,
+.popover-md.questions .popover-content {
+    max-width: calc(100% - 55px);
+    width: auto;
+    margin-top: 18px;
+    right: 22px !important;
+    left: unset !important;
+    border-radius: 0px;
+    border: solid 1px #3c3c48;
+    .list-ios,
+    .list-md {
+        margin: 0px;
+        border: none;
+    }
+    .item-ios,
+    .item-md {
+        background-color: #1d1d27;
+        color: #ffffff; // border-bottom: solid 1px #3c3c48 !important;
+        padding-left: 16px;
+        padding-right: 16px;
+        text-align: center;
+        .item-inner {
+            padding-right: 0px !important;
+        }
+    }
+    .list-ios>.item-block:first-child,
+    .list-md>.item-block:first-child {
+        border: none !important;
+    }
+    .list-ios>.item-block:last-child,
+    .list-ios>.item-wrapper:last-child .item-block,
+    .list-md>.item-block:last-child,
+    .list-md>.item-wrapper:last-child .item-block {
+        border: none !important;
+    }
+    .item-ios[detail-push] .item-inner,
+    button.item-ios:not([detail-none]) .item-inner,
+    a.item-ios:not([detail-none]) .item-inner,
+    .item-md[detail-push] .item-inner,
+    button.item-md:not([detail-none]) .item-inner,
+    a.item-md:not([detail-none]) .item-inner {
+        background-image: none;
+        border: none;
+    }
+}
+
+.i-phone-x {
+    .popover-ios.choose-my-plan .popover-content,
+    .popover-md.choose-my-plan .popover-content {
+        top: 123px !important;
+    }
+}
+
+.popover-ios.choose-my-plan .popover-content,
+.popover-md.choose-my-plan .popover-content {
+    max-width: calc(100% - 55px);
+    width: auto;
+    border-radius: 0px;
+    background-color: transparent;
+    top: 83px !important;
+    right: 0px;
+    button.item:not(:first-child) {
+        border-top: 1px solid rgba(68, 71, 87, 0.13);
+    }
+    button.active {
+        background: #536ef3 !important;
+    }
+    .item-ios,
+    .item-md {
+        background-color: #fafafa !important;
+        color: #000000;
+        text-align: left; // border-bottom: solid 1px rgba(68, 71, 87, 0.13) !important;
+        font-size: 14px;
+        line-height: 1.71;
+    }
+    .item-ios[detail-push] .item-inner,
+    button.item-ios:not([detail-none]) .item-inner,
+    a.item-ios:not([detail-none]) .item-inner,
+    .item-md[detail-push] .item-inner,
+    button.item-md:not([detail-none]) .item-inner,
+    a.item-md:not([detail-none]) .item-inner {
+        background-image: none;
+        border: none;
+    }
+}
+
+.popover-ios.choose-profile .popover-content,
+.popover-md.choose-profile .popover-content {
+    max-width: calc(100% - 62px);
+    width: 100%;
+    left: 31px !important;
+    margin-top: 11px;
+    border-radius: 0px; // .list-ios>.item-block:first-child,
+    // .list-md>.item-block:first-child {
+    //     border: none !important;
+    // }
+    // .list-ios>.item-block:last-child,
+    // .list-ios>.item-wrapper:last-child .item-block,
+    // .list-md>.item-block:last-child,
+    // .list-md>.item-wrapper:last-child .item-block {
+    //     border: none !important;
+    // }
+    .item-ios[detail-push] .item-inner,
+    button.item-ios:not([detail-none]) .item-inner,
+    a.item-ios:not([detail-none]) .item-inner,
+    .item-md[detail-push] .item-inner,
+    button.item-md:not([detail-none]) .item-inner,
+    a.item-md:not([detail-none]) .item-inner {
+        background-image: none;
+        border: none;
+    }
+    .item-ios,
+    .item-ms {
+        border: 0px;
+        &:first-child {
+            border-bottom: solid 1px rgba(68, 71, 87, 0.24) !important;
+            border-top: 0px !important;
+        }
+        &:last-child {
+            border: 0px !important;
+        }
+    }
+}
+
+/* input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: transparent!important;
+    -webkit-box-shadow: 0 0 0px 1000px #1d1d27 inset;
+} */
+
+// .alert-ios .alert-button,
+// .alert-md .alert-button {
+//     min-width: 0px !important;
+//     color: red;
+// }
+.toast-ios .toast-wrapper,
+.toast-md .toast-wrapper {
+    background-color: #5572EF;
+}
+
+.info-alert .alert-wrapper {
+    .alert-head,
+    h3 {
+        max-height: 160px;
+        overflow: scroll;
+    }
+    background: #3a3838;
+    .alert-sub-title {
+        text-align: left;
+        white-space: pre-wrap;
+        color: white;
+    }
+}
+
+.popover-ios.choose-profile .popover-content {
+    button.item:not(:first-child) {
+        border-top: 1px solid rgba(68, 71, 87, 0.13) !important;
+    }
+}
+
+.info-icon {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}

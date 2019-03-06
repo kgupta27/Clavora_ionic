@@ -1,0 +1,32 @@
+<!--
+  Generated template for the CoursePlanPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{navParams.data?.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="container">
+    <ul class="course-header">
+      <li>{{constants.LANGS.LABEL_VITAMIN}}</li>
+      <li>{{constants.LANGS.LABEL_DOSAGE}}</li>
+      <li>{{constants.LANGS.LABEL_APPROX_TIME}}</li>
+      <li>{{constants.LANGS.LABEL_FREQUENCY}}</li>
+      <li>{{constants.LANGS.LABEL_INSTRUCTIONS}}</li>
+    </ul>
+    <course-plan [data]="navParams.data"></course-plan>
+  </div>
+
+</ion-content>
+
+<ion-footer *ngIf="navParams.data.vitaminId">
+  <default-button block class="buy-now" [text]="constants.LANGS.LABEL_BUY_NOW" tappable [navPush]="constants.PAGES.BUY_VIT" [navParams]="navParams.data?.vitamin?.id"></default-button>
+</ion-footer>

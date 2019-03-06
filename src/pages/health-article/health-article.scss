@@ -1,0 +1,84 @@
+page-health-article {
+    .has-refresher>.scroll-content {
+        border-top: none;
+    }
+    .no-data {
+        height: 22px;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 131px;
+        text-align: center;
+        color: #ffffff;
+    }
+    ion-buttons {
+        button {
+            height: 22px;
+        }
+    }
+    .article-img {
+        width: 100%;
+        height: 133px;
+        object-fit: cover;
+    }
+    .article {
+        margin-top: 30px;
+        position: relative;
+    }
+    .container {
+        padding: 0 12px;
+    }
+    .count {
+        // width: 11px;
+        // height: 11px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #ff535e;
+        border: solid 1px #1d1d27;
+        font-family: Helvetica;
+        font-size: 6px;
+        font-weight: bold; // line-height: 7px;
+        padding: 3px;
+        color: #ffffff;
+        right: -2px;
+    }
+    ion-content .title {
+        height: 22px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #ffffff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .subtitle {
+        margin-top: 1px;
+        height: 17px;
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: 0.8px;
+        color: #787993;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .date {
+        margin-top: 12px;
+        width: 82px;
+        height: 18px;
+        padding: 0 6px;
+        background-color: #536ef3;
+        text-align: center;
+        line-height: 18px;
+        font-size: 9px;
+        color: #ffffff;
+    }
+    .icon-container {
+        display: flex;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 133px;
+        justify-content: center;
+    }
+}

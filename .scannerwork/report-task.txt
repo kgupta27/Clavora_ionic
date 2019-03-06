@@ -1,0 +1,6 @@
+projectKey=clavora:ionic
+serverUrl=https://sonarqube.appster.in/sonar
+serverVersion=7.0.0.36138
+dashboardUrl=https://sonarqube.appster.in/sonar/dashboard/index/clavora:ionic
+ceTaskId=AWYe_wOBVbL6iKewL_Jo
+ceTaskUrl=https://sonarqube.appster.in/sonar/api/ce/task?id=AWYe_wOBVbL6iKewL_Jo

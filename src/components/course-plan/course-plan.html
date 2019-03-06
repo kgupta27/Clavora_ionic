@@ -1,0 +1,15 @@
+<div class="course-content" [ngStyle]="{'background-color':data?.vitamin.backgroundColor}">
+  <ul>
+    <li>{{getVitamin()}}</li>
+    <li>{{data?.userCoursePlanDetail?.dosage}}</li>
+    <li>{{data?.userCoursePlanDetail?.timing}}</li>
+    <li>{{data?.userCoursePlanDetail?.frequency}}</li>
+    <li>{{data?.userCoursePlanDetail?.instructions}}</li>
+  </ul>
+  <div class="check-box-container">
+    <div class="check-box" *ngIf="checkBox" tappable (click)="onCheck($event)">
+      <img alt="" [hidden]="value">
+      <img alt="" class="active" [hidden]="!value"> {{value ? constants.LANGS.LABEL_DOSE_TAKEN : constants.LANGS.LABEL_MARK_TAKEN}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+page-onboarding {
+    .container {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        height: 100%;
+        .slide-container {
+            display: flex;
+            height: calc(100% - 73px);
+            position: relative;
+            .slide-zoom {
+                height: 100%; // margin-top: 127px;
+                .slide-title {
+                    color: white;
+                    font-size: 18px;
+                    margin-top: 41px;
+                    margin-left: 32px;
+                    margin-right: 32px;
+                    font-family: 'OpenSans';
+                }
+                p {
+                    font-size: 14px;
+                    margin-left: 32px;
+                    margin-right: 32px;
+                    line-height: 1.29;
+                    text-align: center;
+                    color: #6c6e7f; // white-space: pre-wrap;
+                }
+            }
+            .swiper-pagination-bullets {
+                bottom: 3px !important;
+                .swiper-pagination-bullet {
+                    background-color: #2e2f3b;
+                    opacity: 1;
+                    &.swiper-pagination-bullet-active {
+                        background-color: #a7abc0;
+                    }
+                }
+            }
+        }
+        .bottom-container {
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 30px 30px 0px;
+        }
+        ion-slide {
+            background-image: url("../assets/imgs/onboarding/background.svg");
+            display: -webkit-inline-box;
+        }
+        .middle-container {
+            position: absolute;
+            bottom: 18%;
+        } // .middle-container{
+        //     height: 200px;
+        //     position: absolute;
+        //     bottom: 125px;
+        //     width: 100%;
+        //     background-color: black;
+        //     z-index: 1;
+        //     -webkit-filter: blur(5px);
+        //     -moz-filter: blur(5px);
+        //     -o-filter: blur(5px);
+        //     -ms-filter: blur(5px);
+        //     filter: blur(5px);
+        // }
+        .onboarding-img {
+            height: 100%;
+            top: 7%;
+            background-size: contain !important;
+            position: relative;
+        }
+    }
+}

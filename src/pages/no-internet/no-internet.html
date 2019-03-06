@@ -1,0 +1,13 @@
+<ion-content>
+  <div class="container">
+    <div class="internet-container">
+      <div class="heading">
+          {{constants.LANGS.PAGE_TITLE_NO_INTERNET}}
+      </div>
+      <div class="sub-heading">
+          {{constants.LANGS.PAGE_SUB_TITLE_NO_INTERNET}}
+      </div>
+      <default-button block [text]="constants.LANGS.LABEL_RETRY" tappable (click)="retry()" ></default-button>
+    </div>
+  </div>
+</ion-content>

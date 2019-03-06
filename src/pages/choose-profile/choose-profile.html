@@ -1,0 +1,61 @@
+<!--
+  Generated template for the ChooseProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <img alt="" class="back-arrow-custom" navPop src="assets/icon/back-arrow.svg">
+  <div class="container">
+    <div class="title">
+      {{constants.LANGS.PAGE_TITLE_ADD_COURSE_PLAN}}
+    </div>
+    <ul class="options">
+      <li class="radio-option" (click)="selectOption(1);">
+        <img alt="" [hidden]="selectedOption == 1">
+        <img alt="" class="active" [hidden]="selectedOption != 1"> {{constants.LANGS.PAGE_LABEL_SELF}}
+      </li>
+      <li class="radio-option" (click)="selectOption(2);">
+        <img alt="" [hidden]="selectedOption == 2">
+        <img alt="" class="active" [hidden]="selectedOption != 2"> {{constants.LANGS.PAGE_LABEL_OTHER}}
+      </li>
+    </ul>
+    <div class="sub-title">
+      {{constants.LANGS.PAGE_LABEL_USER_DETAILS}}
+    </div>
+    <ion-item class="your-name" *ngIf="selectedOption == 1">
+      <ion-input type="text" [readonly]="user.userData?.name.length > 0" [(ngModel)]="yourName" autocorrect="on"
+        autocomplete="on" [placeholder]="constants.LANGS.PAGE_LABEL_YOUR_NAME"></ion-input>
+    </ion-item>
+    <div class="field-validation-error" style="position: relative; width: 100%;" *ngIf="selectedOption == 1 && profileAlreadyExist(true)">
+      {{constants.ERRORS.INVALID_PROFILE_NAME}}
+    </div>
+    <div *ngIf="selectedOption == 2">
+      <div class="drop-container">
+        <div class="option" (click)="openProfilePopover($event)">
+          <div class="placeholder" *ngIf="!selectedProfile">{{constants.LANGS.PAGE_LABEL_PERSON}}</div>
+          <div class="value" *ngIf="selectedProfile">{{getSelectedProfile()}}</div>
+          <img alt="" class="dropdown" src="assets/icon/dropdown.svg">
+        </div>
+      </div>
+      <ion-item class="person-name" *ngIf="selectedProfile == 0">
+        <ion-input type="text" [(ngModel)]="personName" autocorrect="on" autocomplete="on" [placeholder]="constants.LANGS.PAGE_LABEL_PERSON_NAME"></ion-input>
+      </ion-item>
+      <div class="field-validation-error" *ngIf="selectedProfile == 0 && profileAlreadyExist()">
+        {{constants.ERRORS.INVALID_PROFILE_NAME}}
+      </div>
+      <div class="drop-container" *ngIf="selectedProfile == 0">
+        <div class="option" (click)="openRelationPopover($event)">
+          <div class="placeholder" *ngIf="!selectedRelation">{{constants.LANGS.PAGE_LABEL_RELATION}}</div>
+          <div class="value" *ngIf="selectedRelation">{{getSelectedRelation()}}</div>
+          <img alt="" class="dropdown" src="assets/icon/dropdown.svg">
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <default-button [attr.disabled]="!selectedOption || duplicateName || (selectedOption == 1 && !yourName) || (selectedOption == 2 && (!selectedProfile || selectedProfile == 0) && (!selectedRelation || !personName))"
+    block class="buy-now" [text]="constants.LANGS.LABEL_NEXT" tappable (click)="onNext()"></default-button>
+</ion-footer>

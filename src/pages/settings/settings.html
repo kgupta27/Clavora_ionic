@@ -1,0 +1,41 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{constants.LANGS.PAGE_TITLE_SETTINGS}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list no-lines>
+  <ion-item (click)="onTerms(true)">
+    {{constants.LANGS.PAGE_LABEL_ACCEPT_TNC_2}}
+  </ion-item>
+  <ion-item (click)="onTerms(false)">
+      {{constants.LANGS.PAGE_LABEL_ACCEPT_TNC_4}}
+  </ion-item>
+  <ion-item (click)="onBoardingTutorial()">
+    {{constants.LANGS.PAGE_LABEL_SETTINGS_ONBOARDING_TUTORIAL}}
+  </ion-item>
+  <ion-item>
+    <ion-label>{{constants.LANGS.PAGE_TITLE_NOTIFICATION}}</ion-label>
+    <ion-toggle [(ngModel)]="isNotification" (ionChange)="onNotification()" ></ion-toggle>
+  </ion-item>
+  <ion-item (click)="onContactAdmin()">
+    {{constants.LANGS.PAGE_TITLE_CONTACT_ADMIN}}
+  </ion-item>
+  <ion-item (click)="onChangePassword()" *ngIf="user.loginType == 'email'">
+    {{constants.LANGS.PAGE_TITLE_CHANGE_PASSWORD}}
+  </ion-item>
+  <ion-item (click)="onLogout()">
+      {{constants.LANGS.PAGE_LABEL_SETTINGS_LOGOUT}}
+  </ion-item>
+</ion-list>
+</ion-content>

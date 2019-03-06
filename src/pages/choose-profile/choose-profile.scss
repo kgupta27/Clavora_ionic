@@ -1,0 +1,100 @@
+page-choose-profile {
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%; // height: 100%;
+        padding-top: 75px;
+        padding-left: 32px;
+        padding-right: 32px;
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+        .options {
+            padding-left: 0;
+            margin: 0;
+            .radio-option {
+                font-size: 16px;
+                display: block;
+                color: white;
+                margin-top: 29px;
+                display: flex;
+                img {
+                    padding-right: 10px;
+                    content: url("../assets/icon/blank-square.svg");
+                    &.active {
+                        content: url("../assets/icon/filled-square.svg");
+                    }
+                }
+            }
+        }
+        .sub-title {
+            color: #6c6e7f;
+            margin-top: 37px;
+        }
+        .your-name {
+            margin-top: 30px;
+        }
+        .drop-container {
+            margin-top: 35px;
+            border-bottom: 1px solid #262632;
+            .option {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                .value {
+                    color: white;
+                    font-size: 16px;
+                }
+            }
+        }
+        .person-name {
+            margin-top: 27px;
+        }
+        div.placeholder {
+            font-family: OpenSans;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.8px;
+            color: #9390a2;
+        }
+    }
+    ion-footer {
+        padding: 10px 25px 38px 25px;
+        background: #1d1d27 !important;
+    }
+}
+
+// .popover-ios.choose-profile .popover-content,
+// .popover-md.choose-profile .popover-content {
+//     max-width: calc(100% - 62px);
+//     width: 100%;
+//     left: 31px !important;
+//     margin-top: 11px;
+//     .item-ios,
+//     .item-ms {
+//         //   border-bottom-width: 0px !important;
+//         // border-bottom-style: solid !important;
+//         // border-bottom-color: transparent !important;
+//         border: 0px !important;
+//         border-color: transparent !important;
+//         &:first-child {
+//             border-bottom: solid 1px rgba(68, 71, 87, 0.24) !important;
+//             border-top: 0px !important;
+//         }
+//         &:last-child {
+//           border: 0px !important;
+//         }
+//     }
+// }
+
+.popover-ios.choose-profile .popover-content {
+    button.item:not(:first-child) {
+        border-top: 1px solid rgba(68, 71, 87, 0.13)!important;
+    }
+}

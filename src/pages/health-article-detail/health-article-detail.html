@@ -1,0 +1,26 @@
+<!--
+  Generated template for the HealthArticleDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+  <img alt="" class="back-arrow-custom" navPop src="assets/icon/back-arrow-shadow.svg">
+  <div class="image-container" *ngIf="navParams.data.videoUrl == ''">
+    <img alt="" class="article-image" [src]="navParams.data.image">
+    <img alt="" class="full-screen-button" src="assets/icon/full-screen-button.svg" tappable (click)="showImage(navParams.data.image)">
+  </div>
+  <div class="video-container" *ngIf="navParams.data.videoUrl != ''">
+    <video [poster]="navParams.data.image" preload="auto" muted controls="" controlsList="nodownload" id="articleVideo">
+      <source [src]="navParams.data.videoUrl" type="video/mp4">
+    </video>
+    <img alt="" class="full-screen-button" src="assets/icon/full-screen-button.svg" tappable (click)="showVideo(navParams.data.videoUrl)">
+  </div>
+  <div class="title">
+    {{navParams.data.title}}
+  </div>
+  <div class="date-container">
+    <div class="date">{{ navParams.data.createdAt | amDateFormat:'ll' }}</div>
+  </div>
+  <div class="description">{{navParams.data.content}}</div>
+</ion-content>

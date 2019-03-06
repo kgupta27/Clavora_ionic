@@ -1,0 +1,26 @@
+page-course-plan {
+    .container {
+        padding: 8px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .course-header {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                width: 20%;
+                padding: 21px 10px 8px 10px;
+                font-size: 12px;
+                color: #787993;
+                word-wrap: initial; // &:last-child {
+                //     word-wrap: normal;
+                // }
+            }
+        }
+    }
+    ion-footer {
+        padding: 20px 25px;
+    }
+}

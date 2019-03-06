@@ -1,0 +1,51 @@
+page-tabs {
+}
+.tabs-ios .tabbar,
+.tabs-md .tabbar {
+  background-color: #1d1d27;
+  border-top: solid 1px #444757;
+}
+.tabs-ios[tabsLayout=title-hide] .tab-button,
+.tabs-ios .tab-button.icon-only,
+.tabs-md[tabsLayout=title-hide] .tab-button,
+.tabs-md .tab-button.icon-only {
+  min-height: 56px;
+}
+.tabs-ios .tab-button.icon-only,
+.tabs-md .tab-button.icon-only {
+  &[aria-selected=true] {
+    &:nth-child(1) .tab-button-icon {
+      background: url('../assets/icon/home-active.svg') no-repeat center;
+    }
+    &:nth-child(2) .tab-button-icon {
+      background: url('../assets/icon/supplements-active.svg') no-repeat center;
+    }
+    &:nth-child(3) .tab-button-icon {
+      background: url('../assets/icon/article-active.svg') no-repeat center;
+    }
+    &:nth-child(4) .tab-button-icon {
+      background: url('../assets/icon/settings-active.svg') no-repeat center;
+    }
+    &::after {
+      content: '';
+      height: 2px;
+      width: 16px;
+      background: white;
+      display: block;
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+  &:nth-child(1) .tab-button-icon {
+    background: url('../assets/icon/home-inactive.svg') no-repeat center;
+  }
+  &:nth-child(2) .tab-button-icon {
+    background: url('../assets/icon/supplements-inactive.svg') no-repeat center;
+  }
+  &:nth-child(3) .tab-button-icon {
+    background: url('../assets/icon/article-inactive.svg') no-repeat center;
+  }
+  &:nth-child(4) .tab-button-icon {
+    background: url('../assets/icon/settings-inactive.svg') no-repeat center;
+  }
+}

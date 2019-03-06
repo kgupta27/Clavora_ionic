@@ -1,0 +1,23 @@
+<ion-content no-bounce>
+  <img alt="" class="back-arrow-custom" *ngIf="navCtrl.canGoBack()" navPop src="assets/icon/back-arrow.svg">
+  <div class="container">
+    <div class="slide-container">
+      <ion-slides pager>
+        <ion-slide *ngFor="let slide of slidesData">
+          <!-- <img alt="" [src]="slide.image" class="slide-image" /> -->
+          <div [ngStyle]="{'background' : 'url(' + slide.image + ') center center no-repeat'}" class="onboarding-img">
+            <div class="middle-container">
+              <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+              <p [innerHTML]="slide.description"></p>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <!-- <div class="middle-container"></div> -->
+    <div class="bottom-container" *ngIf="!navCtrl.canGoBack()">
+      <default-button [text]="constants.LANGS.LABEL_SKIP" clear tappable (click)="onSkip()"></default-button>
+      <default-button [text]="constants.LANGS.LABEL_NEXT" tappable (click)="onNext()"></default-button>
+    </div>
+  </div>
+</ion-content>

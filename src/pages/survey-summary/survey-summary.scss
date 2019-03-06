@@ -1,0 +1,62 @@
+page-survey-summary {
+    .container {
+        margin: 26px 21px 26px 21px;
+        .title {
+            height: 22px;
+            font-size: 16px;
+            line-height: 22px;
+            color: #ffffff;
+        }
+        .summary {
+            margin-top: 26px;
+            .gradient-option {
+                display: flex;
+                background-image: linear-gradient(117deg, #8ba7fa, #536ef3);
+                box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+                color: #ffffff;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.9px;
+                color: #ffffff;
+                margin-top: 20px;
+                padding: 9px 0;
+                .label {
+                    width: 26px;
+                    height: 26px;
+                    border-radius: 13px;
+                    object-fit: contain; // margin: 6px 11px 6px 6px;
+                    margin: 0px 11px 6px 6px;
+                    line-height: 26px;
+                    font-family: Helvetica;
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    text-align: center;
+                    object-fit: contain;
+                    border-radius: 13px;
+                    color: #ffffff;
+                    background-color: #a7bcff;
+                }
+                .question {
+                    width: calc(100% - 50px);
+                }
+            }
+        }
+    }
+    ion-footer {
+        padding: 0 20px 30px 20px;
+        default-button {
+            width: 94px;
+            height: 43px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.9px;
+            text-align: center;
+            color: #ffffff;
+            padding: 13px!important;
+        }
+        .go-back {
+            background-color: #1db690;
+        }
+    }
+}

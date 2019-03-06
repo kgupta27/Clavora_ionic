@@ -1,0 +1,42 @@
+page-notification {
+    .no-data {
+        height: 22px;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 131px;
+        text-align: center;
+        color: #ffffff;
+    }
+    .container {
+        margin: 28px 30px 0 30px;
+    }
+    .notification {
+        &.seen {
+            opacity: 0.3;
+        }
+        .title {
+            font-size: 14px;
+            line-height: 22px;
+            color: #ffffff
+        }
+        .subtitle {
+            margin-top: 1px;
+            font-size: 12px;
+            line-height: 17px;
+            letter-spacing: 0.8px;
+            color: #787993;
+        }
+        .date {
+            margin-top: 15px;
+            width: auto;
+            display: inline-block;
+            height: 18px;
+            padding: 0 6px;
+            background-color: #536ef3;
+            text-align: center;
+            line-height: 18px;
+            font-size: 9px;
+            color: #ffffff
+        }
+    }
+}

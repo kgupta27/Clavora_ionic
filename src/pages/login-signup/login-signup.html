@@ -1,0 +1,54 @@
+<!--
+  Generated template for the LoginSignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding-right padding-left no-bounce>
+  <div padding-right padding-left>
+    <img alt="" class="back-arrow-custom" *ngIf="isLogin" (click)="togglePage()" src="assets/icon/back-arrow.svg">
+    <div class="title">{{isLogin?constants.LANGS.PAGE_LABEL_LOGIN:constants.LANGS.LABEL_SIGN_UP}}</div>
+    <div class="sub-title">{{isLogin?constants.LANGS.PAGE_LABEL_LOGIN_DETAIL:constants.LANGS.PAGE_LABEL_SIGN_UP_DETAIL}}</div>
+    <form class="connect-form" [formGroup]="connectForm">
+      <ion-item class="form-item">
+        <ion-input type="email" autocorrect="on" autocomplete="on" name="email" formControlName="email" [placeholder]="constants.LANGS.LABEL_EMAIL_ADDRESS"></ion-input>
+      </ion-item>
+      <div class="field-validation-error" *ngIf="email.dirty && !email.valid">
+        {{constants.ERRORS.INVALID_EMAIL}}
+      </div>
+      <ion-item class="form-item">
+        <ion-input type="password" name="password" formControlName="password" maxlength="18" [placeholder]="constants.LANGS.LABEL_PASSWORD"></ion-input>
+      </ion-item>
+      <div class="field-validation-error" *ngIf="password.dirty && !password.valid">
+        {{constants.ERRORS.INVALID_PASSWORD}}
+      </div>
+      <default-button tappable (click)="connect()" class="connect-button" [attr.disabled]="!email.valid || !password.valid" block text="{{isLogin?constants.LANGS.LABEL_LOGIN:constants.LANGS.LABEL_SIGN_UP}}"></default-button>
+      <!-- <button class="connect-button" type="submit" (click)="connect()" ion-button
+        block>Sign Up</button> -->
+    </form>
+    <div class="social-buttons">
+      <div class="social-button facebook" tappable (click)="doFacebookLogin()">
+        <img alt="" class="fb-icon" src="assets/imgs/login-signup/fb.svg"> {{constants.LANGS.LABEL_FACEBOOK}}
+      </div>
+      <div class="social-button google" tappable (click)="doGoogleLogin()">
+        <img alt="" class="google-icon" src="assets/imgs/login-signup/google.png"> {{constants.LANGS.LABEL_GOOGLE}}
+      </div>
+    </div>
+  </div>
+
+  <div class="tnc" *ngIf="!isLogin">
+    <!-- <div>{{constants.LANGS.PAGE_LABEL_ACCEPT_TNC_1}}</div> -->
+    <div>
+      <a (click)="openTnC(true)">{{constants.LANGS.PAGE_LABEL_ACCEPT_TNC_2}}</a> {{constants.LANGS.PAGE_LABEL_ACCEPT_TNC_3}}
+      <a (click)="openTnC(false)">{{constants.LANGS.PAGE_LABEL_ACCEPT_TNC_4}}</a>
+    </div>
+  </div>
+  <div class="tnc forgot-pass" *ngIf="isLogin" (click)="openForgetPassword()">
+
+    <a>{{constants.LANGS.LABEL_FORGOT_PASSWORD}}?</a>
+  </div>
+
+  <div class="login-subtitle">{{isLogin?constants.LANGS.PAGE_LABEL_DONT_HAVE_ACCOUNT:constants.LANGS.PAGE_LABEL_ALREADY_HAVE_ACCOUNT}}
+    <a (click)="togglePage()">{{isLogin?constants.LANGS.LABEL_SIGN_UP:constants.LANGS.LABEL_LOGIN}}</a>
+  </div>
+</ion-content>

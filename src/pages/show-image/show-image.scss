@@ -1,0 +1,10 @@
+page-show-image {
+    ion-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background: #1d1d27;
+        contain: initial !important;
+    }
+}

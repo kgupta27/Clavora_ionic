@@ -1,0 +1,130 @@
+page-login-signup {
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 26px;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        margin-top: 95px;
+    }
+    .sub-title {
+        font-size: 14px;
+        margin-top: 15px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        color: #6c6e7f;
+    }
+    .connect-form {
+        margin-top: 9px;
+    }
+    .form-item {
+        margin-top: 27px;
+        &:not(.item-input-has-value) [name="email"] {
+            input {
+                background-image: url("../assets/icon/email.svg");
+                background-repeat: no-repeat;
+                background-position: 6px 6px;
+            }
+            ::placeholder {
+                text-indent: 29px;
+            }
+        }
+        &:not(.item-input-has-value) [name="password"] {
+            input {
+                background-image: url("../assets/icon/password.svg");
+                background-repeat: no-repeat;
+                background-position: 6px 1px;
+            }
+            ::placeholder {
+                text-indent: 29px;
+            }
+        }
+    }
+    .connect-button {
+        margin-top: 45px;
+        width: 100%;
+        line-height: 22px;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: #ffffff;
+    }
+    .social-buttons {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        .social-button{
+            display: flex;
+            justify-content: center;
+            width: calc(50% - 8px);
+            padding: 12px;
+            font-size: 14px;
+            font-weight: bold;
+            &.facebook{
+                background-color: #36599a;
+                color: white;
+            }
+            &.google{
+                background: white;
+                color: #1d1d27;
+            }
+            .fb-icon {
+                width: 10px;
+                height: 18px;
+                margin-right: 9px;
+                object-fit: contain;
+            }
+            .google-icon {
+                width: 18.1px;
+                height: 18.5px;
+                margin-right: 9px;
+                object-fit: contain;
+            }
+        }
+    }
+    // .social-button {
+    //     width: calc(50% - 10px);
+    //     margin: 0;
+    //     &:first-child {
+    //         margin-right: 16px;
+    //     }
+    // }
+    .tnc {
+        margin-top: 51px;
+        font-size: 12px;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: #6c6e7f;
+        &.forgot-pass {
+            margin-top: 27px;
+            padding-bottom: 35px;
+        }
+        a {
+            line-height: 2.21;
+            letter-spacing: 0.4px;
+            text-decoration: underline;
+            text-align: center;
+            color: #cb4168;
+        }
+    }
+    .login-subtitle {
+        margin-top: 34px;
+        font-size: 14px;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: #6c6e7f;
+        a {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.71;
+            text-decoration: underline;
+            color: #536ef3;
+        }
+    }
+}

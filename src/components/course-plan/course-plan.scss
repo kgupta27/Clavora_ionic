@@ -1,0 +1,43 @@
+course-plan {
+    .course-content {
+        background-color: orange;
+        margin: 8px 0;
+        ;
+        font-size: 11px;
+        color: white;
+        flex-direction: column;
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            li {
+                width: 20%;
+                padding: 16px 10px 13px 10px;
+                &:first-child {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .check-box-container{
+            display: flex;
+            .check-box {
+                display: flex;
+                align-items: center;
+                padding-bottom: 11px;
+                img {
+                    margin: 0 10px;
+                    width: 18px;
+                    height: 18px;
+                    object-fit: contain;
+                    content: url("../assets/icon/blank-check-box.svg");
+                    &.active {
+                        content: url("../assets/icon/filled-check-box.svg");
+                    }
+                }
+            }
+        }
+    }
+}

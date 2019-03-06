@@ -1,0 +1,115 @@
+page-supplement-requirement {
+    ion-header {
+        .toolbar-ios ion-title,
+        .toolbar-md ion-title {
+            padding: 0 53px 1px;
+        }
+    }
+
+    .container {
+        padding: 8px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .date-container {
+            margin: 21px 13px 14px 17px;
+            position: relative;
+            .date {
+                height: 19px;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 19px;
+                color: #ffffff;
+            }
+            .calendar-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+        .no-data {
+            height: 22px;
+            font-family: OpenSans;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 123px;
+        }
+        .data-container {
+            overflow: scroll;
+            padding-bottom: 100px;
+            .course-header {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    width: 20%;
+                    padding: 21px 10px 8px 10px;
+                    font-size: 12px;
+                    color: #787993;
+                    word-wrap: initial;
+                    // &:last-child {
+                    //     word-wrap: normal;
+                    // }
+                }
+            }
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 35px;
+            background-color: #1d1d27;
+            padding-top: 25px;
+            width: calc(100% - 16px);
+            .prev-button,
+            .next-button {
+                background-color: #34343e;
+                font-size: 14px;
+                width: 100px;
+                &.disabled {
+                    opacity: 0.7;
+                    // pointer-events: none;
+                }
+            }
+            ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                align-items: center;
+                width: 100%;
+                justify-content: space-evenly;
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #34343e;
+                    font-size: 16px;
+                    min-height: 26px;
+                    min-width: 26px;
+                    border-radius: 13px;
+                    &.active {
+                        background-color: #536ef3;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+page-calendar ion-calendar .ion-ios-arrow-back:before,
+page-calendar ion-calendar .ion-md-arrow-back:before,
+page-calendar ion-calendar .ion-ios-arrow-forward:before,
+page-calendar ion-calendar .ion-md-arrow-forward:before {
+  color: #ffffff;
+  background-color: #536ef3;
+  // width: 25px;
+  // height: 25px;
+  border-radius: 100%;
+  padding: 7px 13px;
+  font-weight: bold;
+}

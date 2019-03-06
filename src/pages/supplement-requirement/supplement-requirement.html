@@ -1,0 +1,49 @@
+<!--
+  Generated template for the SupplementRequirementPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{constants.LANGS.PAGE_LABEL_SUPP_REQ}}</ion-title>
+    <ion-buttons end>
+      <button ion-button clear tappable (click)="openProfilePopover()">
+        <img alt="" class="profile" src="assets/icon/profile.svg">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="container">
+    <div class="date-container">
+      <div class="date">{{ date | amDateFormat:'ll' }}</div>
+      <img alt="" class="calendar-icon" src="assets/imgs/supplement-requirement/calendar.svg" tappable (click)="openCalendar()">
+    </div>
+    <div class="no-data" *ngIf="courses.length == 0">
+      {{constants.LANGS.PAGE_LABEL_NO_SUPP_REQ}}
+    </div>
+    <div class="data-container" *ngIf="courses.length > 0">
+      <ul class="course-header">
+        <li>{{constants.LANGS.LABEL_VITAMIN}}</li>
+        <li>{{constants.LANGS.LABEL_DOSAGE}}</li>
+        <li>{{constants.LANGS.LABEL_APPROX_TIME}}</li>
+        <li>{{constants.LANGS.LABEL_FREQUENCY}}</li>
+        <li>{{constants.LANGS.LABEL_INSTRUCTIONS}}</li>
+      </ul>
+      <!-- <course-plan [data]="navParams.data"></course-plan> -->
+      <course-plan *ngFor="let course of courses" [data]="course" [checkBox]="true" [date]="date"></course-plan>
+    </div>
+    <div class="button-container" *ngIf="courses.length > 0">
+      <default-button class="prev-button" [class.disabled]="currentPage == 1" [text]="constants.LANGS.LABEL_PREV"
+        tappable (click)="onPrev()"></default-button>
+      <ul>
+        <li *ngFor="let page of pages" [class.active]="page == currentPage" (click)="onPage(page)">{{page}}</li>
+      </ul>
+      <default-button class="next-button" [class.disabled]="currentPage == totalPage" [text]="constants.LANGS.LABEL_NEXT"
+        tappable (click)="onNext()"></default-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,15 @@
+page-settings {
+    .item{
+            border: none;
+            background-color: transparent;
+            font-size: 14px;
+            color: white;
+            padding-left: 13px;
+            padding-right: 10px;
+            .toggle-checked {
+                .toggle-icon{
+                    background-color: #4ed65c;
+                }
+            }
+        }
+}

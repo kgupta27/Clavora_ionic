@@ -1,0 +1,80 @@
+page-choose-consumption {
+    .container {
+        padding: 12px 20px;
+        p {
+            color: white;
+            margin: 33px 0;
+        }
+        .question-container {
+            display: flex;
+            background-image: linear-gradient(102deg, #8ba7fa, #536ef3);
+            box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: white;
+            padding: 6px;
+            .question-option {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 26px;
+                height: 26px;
+                border-radius: 13px;
+                background-color: #a7bcff;
+                margin-right: 11px;
+            }
+            .question {
+                display: flex;
+                align-items: center;
+                width: calc(100% - 70px);
+                padding-right: 14px;
+            }
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            margin: 20px 57px;
+            .radio-option {
+                display: flex;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                justify-content: space-between;
+                font-size: 14px;
+                font-weight: 500;
+                color: rgba(white, 0.3);
+                span {
+                    justify-content: center;
+                    display: flex;
+                    vertical-align: center;
+                    line-height: 24px;
+                }
+                img {
+                    padding-right: 13px;
+                    content: url("../assets/icon/blank-circle.svg");
+                    &.active {
+                        content: url("../assets/icon/filled-circle.svg");
+                    }
+                }
+                &.active {
+                    color: white;
+                }
+            }
+            .info-icon {
+                content: none !important;
+                padding: 0 !important;
+            }
+        }
+    }
+    ion-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        default-button {
+            display: flex;
+            width: auto;
+        }
+    }
+}
